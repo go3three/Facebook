@@ -1,5 +1,5 @@
 var http = require('http');
-var router = require('./router.js');
+var router = require('./app/router.js');
 var mainHandler = function(req, res) {
     var path = req.method + ' ' + req.url;
     console.log(path);
@@ -11,6 +11,4 @@ var mainHandler = function(req, res) {
         res.end('Not found');
     }
 };
-http.createServer(mainHandler).listen(process.env.PORT || 8080, function() {
-    console.log('Listening on 8080');
-});
+module.exports=mainHandler;

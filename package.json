@@ -5,9 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-     "test": "node ./tests/index.js",
-     "cov":"node_modules/.bin/istanbul cover ./tests/index.js"
-
+    "test": "node ./tests/index.js",
+    "cov": "node_modules/.bin/istanbul cover ./tests/index.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +19,7 @@
   },
   "homepage": "https://github.com/go3three/Faceebook#readme",
   "dependencies": {
+    "codeclimate-test-reporter": "^0.4.1",
     "shot": "^3.4.0",
     "tape": "^4.6.3"
   },
