@@ -49,6 +49,7 @@ module.exports = function(req, res) {
                 console.log('errorWrite', err);
             }
         })
+          var b = qs.parse(body);
         var q = `SELECT * FROM info where username=${b.username};`;
         db.selectdata(client, q, function(err, result) {
 
