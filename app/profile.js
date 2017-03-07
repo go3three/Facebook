@@ -11,6 +11,16 @@ var config = {
     idleTimeoutMillis: 30000,
     ssl:true // how long a client is allowed to remain idle before being closed
 };
+var config1 = {
+    user: 'postgres', //env var: PGUSER
+    database: 'facebook', //env var: PGDATABASE
+    password: '482106', //env var: PGPASSWORD
+    host: 'localhost', // Server hosting the postgres database
+    port: 5432, //env var: PGPORT
+    max: 10, // max number of clients in the pool
+    idleTimeoutMillis: 30000,
+    ssl:true // how long a client is allowed to remain idle before being closed
+};
 var client = db.createClient(config);
 db.createTable(client, function(errTable, resTable) {
     // client.end();
@@ -43,17 +53,17 @@ module.exports = function(req, res) {
               '${b.password}'
           );
         `;
-          var q = `SELECT * FROM info where username=${b.username};`;
+  var q = `SELECT username,password FROM info where username='${b.username}' LIMIT 1;`;
         db.insertdata(client, query, function(err, result) {
 
             if (err) {
                 console.log('errorWrite', err);
             }
         })
-      
+
         db.selectdata(client, q, function(err, result) {
 
-            console.log(result.rows);
+            console.log("this is result"+ result.rows);
             client.end();
 
             res.end(JSON.stringify(result.rows))
