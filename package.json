@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "node ./tests/index.js",
+    "test": "node ./tests/run.js",
     "cov": "node_modules/.bin/istanbul cover ./tests/index.js",
     "dev:test":"nodemon ./tests/index.js"
   },

@@ -1,11 +1,15 @@
+var qs = require('querystring');
 function parseBody(req, callback) {
     var body = '';
     req.on('data', function(data) {
-      data=data.toString();
+
+      //  data=data.toString();
         body += data;
+
+
     });
     req.on('end', function() {
-        callback(undefined, body);
+              callback(undefined,body);
     });
 }
 module.exports = {
