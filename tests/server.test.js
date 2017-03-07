@@ -37,7 +37,7 @@ test('POST /profile: should post data', function(t) {
     shot.inject(mainHandler, {
         method: 'POST',
         url: '/profile',
-        payload: {"username=user&password=pass" }
+        payload:"username=user&password=pass"
     }, function(res) {
 
         t.equal(res.statusCode, 200, 'index file is exist ');
