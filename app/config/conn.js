@@ -28,9 +28,9 @@ var createTable = (client, cb) => {
 var selectdata = (client,query,cb) => {
      client.query(query,cb);
 };
-var insertdata = (client, data,tablename, cb) => {
-    var rawSql = `INSERT INTO ${tablename} VALUES (\'${data}\');`;
-    client.query(rawSql, cb);
+var insertdata = (client, data, cb) => {
+    // var rawSql = `INSERT INTO info VALUES (\'${data}\');`;
+    client.query(data, cb);
 };
 module.exports = {
     createClient: createClient,

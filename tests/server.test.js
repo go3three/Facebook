@@ -42,7 +42,7 @@ test('POST /profile: should post data', function(t) {
             'password': "pass"
         }
     }, function(res) {
-console.log(res.payload);
+
         t.equal(res.statusCode, 200, 'index file is exist ');
         t.deepEqual(res.payload,'{"username":"user","password":"pass"}',"its take the data");
         t.end();

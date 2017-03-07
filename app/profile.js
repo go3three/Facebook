@@ -17,11 +17,46 @@ db.createTable(client, function(errTable, resTable) {
 module.exports = function(req, res) {
     utils.parseBody(req, function(undefined, body) {
         var b = JSON.parse(body);
-        var q = "SELECT * FROM info ;";
-        db.selectdata(client, q, function(err, result) {
-          console.log(result.rows);
-            client.end();
+      console.log("*****",b.username,"***");
+
+
+        var query = `
+        INSERT INTO info (
+              first_name,
+              last_name,
+              dob,
+              gender,
+              about,
+              image_url,
+              firends,
+              username,
+              password
+          )
+          values(
+              'ahmed',
+              'ibrahim',
+              '06/10/1986',
+              'M',
+              'software engineering',
+              'www.google.com',
+              '3',
+              '${b.username}',
+              '${b.password}'
+          );
+        `;
+        db.insertdata(client,query,function(err,result){
+
+              if(err) {
+                console.log('errorWrite',err);
+              }
         })
-        res.end(body)
+var q = "SELECT * FROM info ;";
+    db.selectdata(client,q,function(err, result) {
+          // console.log(result.rows);
+            client.end();
+
+        res.end(JSON.stringify(result.rows)) 
+     })
+
     })
 }
