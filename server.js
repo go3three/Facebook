@@ -1,6 +1,7 @@
 var http = require('http');
 var router = require('./app/router.js');
 var mainHandler = function(req, res) {
+
     var path = req.method + ' ' + req.url;
     console.log(path);
     try {
