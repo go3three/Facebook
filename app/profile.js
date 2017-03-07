@@ -27,7 +27,7 @@ module.exports = function(req, res) {
               gender,
               about,
               image_url,
-              firends,
+              friends,
               username,
               password
           )
