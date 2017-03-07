@@ -37,14 +37,11 @@ test('POST /profile: should post data', function(t) {
     shot.inject(mainHandler, {
         method: 'POST',
         url: '/profile',
-        payload: {
-            'username': "user",
-            'password': "pass"
-        }
+        payload:"username=user&password=pass"
     }, function(res) {
-console.log(res.payload);
+
         t.equal(res.statusCode, 200, 'index file is exist ');
-        t.deepEqual(res.payload,'{"username":"user","password":"pass"}',"its take the data");
+        t.deepEqual(res.payload,'[{"username":"user","password":"pass"}]',"its take the data");
         t.end();
     });
 
