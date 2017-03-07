@@ -2,10 +2,10 @@ var db = require('./config/conn.js');
 var utils = require('./utils.js');
 var qs = require('querystring');
 var config = {
-    user: 'postgres', //env var: PGUSER
-    database: 'facebook', //env var: PGDATABASE
-    password: '482106', //env var: PGPASSWORD
-    host: 'localhost', // Server hosting the postgres database
+    user: 'fxabnxhklpyyrv', //env var: PGUSER
+    database: 'd5n26g4qdcdst4', //env var: PGDATABASE
+    password: '153dbea38521b25d53bd635d5b26a6e98dc53d5da98e0ea51c5f37bfa78fe37e', //env var: PGPASSWORD
+    host: 'ec2-23-23-237-68.compute-1.amazonaws.com', // Server hosting the postgres database
     port: 5432, //env var: PGPORT
     max: 10, // max number of clients in the pool
     idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
