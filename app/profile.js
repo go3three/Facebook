@@ -8,7 +8,8 @@ var config = {
     host: 'ec2-23-23-237-68.compute-1.amazonaws.com', // Server hosting the postgres database
     port: 5432, //env var: PGPORT
     max: 10, // max number of clients in the pool
-    idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
+    idleTimeoutMillis: 30000,
+    ssl:true // how long a client is allowed to remain idle before being closed
 };
 var client = db.createClient(config);
 db.createTable(client, function(errTable, resTable) {
