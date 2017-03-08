@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node index.js",
-    "test": "node ./tests/run.js",
+    "test": "node ./tests/runner.js",
+    "migrate": "node scripts/migrate.js",
     "cov": "node_modules/.bin/istanbul cover ./tests/run.js",
     "dev:test":"nodemon ./tests/index.js"
   },
