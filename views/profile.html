@@ -8,111 +8,56 @@
 
 <head>
 
-	<meta charset="utf-8">
-	<title>Paper Stack</title>
-	<link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="utf-8">
+    <title>Paper Stack</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
-<<<<<<< HEAD
-<body>
-    <div id="container">
-
-        <div id='cover_container' style="background:url('cover.jpg');">
-            <div id='info_box'>
-                <div id="profile_img"><img src='http://www.gravatar.com/avatar/a422402df9e5dc54fab6e8131dd19fd0?s=80' class='avatar_img' /></div>
-
-                <div id="info-box">
-                    <div id="info-name"><b>WTF Diary</b></div>
-                    <div id="info-content">
-                        <div style="float:right">
-                            <div>
-                                <a href="/" onclick="logout()"><img style="width:25px;height:25px"src='cameraa.png' title='LogOut' /></a>
-                            </div>
-                        </div>
-
-                        <div id="info-photos">
-                            <div>Photos</div>
-                            <div><b>17</b></div>
-                        </div>
-
-                        <div id="info-friends">
-                            <div>Friends</div>
-                            <div><b>270</b></div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div style='clear:both'></div>
-
+<body class="profile-page">
+    <div class="container">
+        <a href="" id="signout" onclick="logout()">Sign out</a>
+        <aside class="sidebar">
+            <div class="img-wrp gray-border">
+                <img src="imgs/ghada.jpg" alt="">
             </div>
-        </div>
+            <div class="info-wrp gray-border">
+                <h3>Info</h3>
+                <ul>
+                    <li><label>Name: </label><span>{{FullName}}</span></li>
+                    <li><label>Female: </label><span>{{Gender}}</span></li>
+                </ul>
+            </div>
+            <div class="friends-wrp gray-border">
+                <h3>Friends</h3>
+                <ul>
+                    <li><a href="">Ghada Ibra</a></li>
+                    <li><a href="">Akram Badah</a></li>
+                    <li><a href="">Mohammed </a></li>
+                </ul>
+            </div>
+        </aside>
 
-<form id="form" action="#">
-          <input class="container-content" type="textarea" rows="4" cols="50">
-
-</form>
+        <section class="content">
+            <div class="post-head gray-border">
+                <h2>Wall Posts</h2>
+                <textarea name="post" rows="8" cols="70" placeholder="Share your thoughts with the world..."></textarea>
+                <button type="button" name="button">Post</button>
+            </div>
+            <div class="posts-wrp">
+                <article>
+                    <h3>13/5/2017</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+                        eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
+                </article>
+                <article>
+                    <h3>13/5/2017</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+                        eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
+                </article>
+            </div>
+        </section>
     </div>
 </body>
 <script src="info.js"></script>
-<script>
-if (window.event.keycode == 13)
-{
-document.getElementById('form').submit();
-}</script>
-=======
-<body class="profile-page">
-  <div class="container">
-    <aside class="sidebar">
-      <div class="img-wrp gray-border">
-        <img src="imgs/ghada.jpg" alt="">
-      </div>
-      <div class="info-wrp gray-border">
-        <h3>Info</h3>
-        <ul>
-          <li><label>Name: </label><span>Ghada Ibra</span></li>
-          <li><label>Female: </label><span>Female</span></li>
-          <li><label>Age: </label><span>30 years old</span></li>
-        </ul>
-      </div>
-      <div class="friends-wrp gray-border">
-        <h3>Friends</h3>
-        <ul>
-          <li><a href="">Ghada Ibra</a></li>
-          <li><a href="">Akram Badah</a></li>
-          <li><a href="">Mohammed </a></li>
-        </ul>
-      </div>
-    </aside>
 
-    <section class="content">
-      <div class="post-head gray-border">
-        <h2>Wall Posts</h2>
-        <textarea name="post" rows="8" cols="70" placeholder="Share your thoughts with the world..."></textarea>
-        <button type="button" name="button">Post</button>
-      </div>
-      <div class="posts-wrp">
-        <article>
-          <h3>13/5/2017</h3>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-            Aenean commodo ligula eget dolor. Aenean massa.
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-            Nulla consequat massa quis enim. </p>
-        </article>
-        <article>
-          <h3>13/5/2017</h3>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-            Aenean commodo ligula eget dolor. Aenean massa.
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-            Nulla consequat massa quis enim. </p>
-        </article>
-      </div>
-    </section>
-  </div>
-</body>
-<script src="infojs.js"></script>
-
->>>>>>> 2a59aa63179cdc86b4b2aafc1eccb42a0796c1fe
 </html>

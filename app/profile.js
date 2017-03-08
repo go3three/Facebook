@@ -3,7 +3,7 @@ var utils = require('./utils.js');
 var qs = require('querystring');
 var fs =require('fs');
 var wtfdiary = fs.readFileSync(__dirname + '/../views/wtfdiary.css');
-var cameraa = fs.readFileSync(__dirname + '/../views/cameraa.png');
+var img = fs.readFileSync(__dirname + '/../views/imgs/ghada.jpg');
 var cover = fs.readFileSync(__dirname + '/../views/cover.jpg');
 var client = db.createClient(db.config);
 db.createTable(client, function(errTable, resTable) {
@@ -17,11 +17,11 @@ module.exports = function(req, res) {
           'Content-type': 'text/css'
       })
       res.write(wtfdiary)
-    } else if (path == 'GET /cameraa.png') {
+    } else if (path == 'GET /imgs/ghada.jpg') {
       res.writeHead(200, {
-          'Content-type': 'image/png'
+          'Content-type': 'image/jpg'
       })
-      res.write(cameraa)
+      res.write(img)
     } else if (path == 'GET /cover.jpg') {
       res.writeHead(200, {
           'Content-type': 'text/png'
