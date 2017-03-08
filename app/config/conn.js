@@ -20,6 +20,8 @@ var config = {
 //     idleTimeoutMillis: 30000,
 //     ssl:true // how long a client is allowed to remain idle before being closed
 // };
+
+
 var createClient = (config, cb) => {
     var client = new pg.Client(config);
     client.connect(err => {
