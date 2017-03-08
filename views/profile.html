@@ -1,57 +1,69 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6 ielt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7 ielt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<meta charset="utf-8">
+	<title>Paper Stack</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
 
-  <head>
-
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-    <link href="wtfdiary.css" rel="stylesheet" type="text/css">
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <title>
-    Facebook like Profile Page design using HTML and CSS
-    </title>
-  </head>
-
-  <body>
-    <div id="container" class="container">
-
-      <div id='cover_container' style="background:url('cover.jpg');">
-        <div id='info_box'>
-
-          <div id="profile_img">
-            <img src='http://www.gravatar.com/avatar/a422402df9e5dc54fab6e8131dd19fd0?s=80' class='avatar_img'/>
-          </div>
-
-          <div id="info-box">
-            <div id="info-name"><b>WTF Diary</b></div>
-              <div id="info-content">
-                <div style="float:right">
-                  <div><a href='change_cover.php'><img src='cameraa.png' title='Change Cover Picture'/></a></div>
-                </div>
-
-                <div id="info-photos">
-                  <div>Photos</div>
-                  <div><b>17</b></div>
-                </div>
-
-                <div id="info-friends">
-                  <div>Friends</div>
-                  <div><b>270</b></div>
-                </div>
-            </div>
-          </div>
-
-          <div style='clear:both'></div>
-
-        </div>
+<body class="profile-page">
+  <div class="container">
+    <aside class="sidebar">
+      <div class="img-wrp gray-border">
+        <img src="imgs/ghada.jpg" alt="">
       </div>
-
-      <div id="container-content">
-        <h2>Put your Content Here.</h2>
+      <div class="info-wrp gray-border">
+        <h3>Info</h3>
+        <ul>
+          <li><label>Name: </label><span>Ghada Ibra</span></li>
+          <li><label>Female: </label><span>Female</span></li>
+          <li><label>Age: </label><span>30 years old</span></li>
+        </ul>
       </div>
+      <div class="friends-wrp gray-border">
+        <h3>Friends</h3>
+        <ul>
+          <li><a href="">Ghada Ibra</a></li>
+          <li><a href="">Akram Badah</a></li>
+          <li><a href="">Mohammed </a></li>
+        </ul>
+      </div>
+    </aside>
 
-    </div>
-  </body>
+    <section class="content">
+      <div class="post-head gray-border">
+        <h2>Wall Posts</h2>
+        <textarea name="post" rows="8" cols="70" placeholder="Share your thoughts with the world..."></textarea>
+        <button type="button" name="button">Post</button>
+      </div>
+      <div class="posts-wrp">
+        <article>
+          <h3>13/5/2017</h3>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+            Aenean commodo ligula eget dolor. Aenean massa.
+            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+            Nulla consequat massa quis enim. </p>
+        </article>
+        <article>
+          <h3>13/5/2017</h3>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+            Aenean commodo ligula eget dolor. Aenean massa.
+            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+            Nulla consequat massa quis enim. </p>
+        </article>
+      </div>
+    </section>
+  </div>
+</body>
+<script src="infojs.js"></script>
+
 </html>

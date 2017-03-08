@@ -3,40 +3,46 @@
 <!--[if IE 7 ]>    <html lang="en" class="ie7 ielt8"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8">
-    <title>Paper Stack</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link href="wtfdiary.css" rel="stylesheet" type="text/css">
-  </head>
-  <body>
-  <div class="container">
-  	<section id="content">
-  		<form action="">
-  			<h1>Login Form</h1>
-  			<div>
-  				<input type="text" placeholder="First name" required="" id="firstname" />
-  			</div>
-  			<div>
-  				<input type="text" placeholder="Last name" required="" id="lastname" />
-  			</div>
-        <div>
-  				<input type="email" placeholder="Email" required="" id="email" />
-  			</div>
-        <div>
-  				<input type="password" placeholder="Password" required="" id="password" />
-  			</div>
-        <div>
-  				<input type="password" placeholder="Password confirmation" required="" id="passwordcon" />
-  			</div>
-        <div>
-          <input type="date" placeholder="Date of birth" id="date">
-  			</div>
-  			<div>
-  				<input type="submit" value="join" />
-  			</div>
-  		</form><!-- form -->
-  	</section><!-- content -->
-  </div><!-- container -->
-  </body>
+<head>
+<meta charset="utf-8">
+<title>Paper Stack</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div class="container">
+	<section id="content">
+		<form action="/reg" method="POST">
+			<h1>Register Form</h1>
+      <div>
+        <input type="text" placeholder="Username" required="" id="Username" name="username"/>
+      </div>
+      <div>
+        <input type="password" placeholder="Password" required="" id="Password" name="password"/>
+      </div>
+      <div>
+				<input type="text" placeholder="First Name" required="" id="Fname" name="Fname"/>
+			</div>
+			<div>
+				<input type="text" placeholder="Last Name" required="" id="Lname" name="Lname" />
+			</div>
+      <div>
+        <input type="date" placeholder="Date of birthday" required="" id="dob" name="dob" />
+      </div>
+			<div class="radio-wrp">
+				<label>
+					<input type="radio" name="gender" value="male"> Male<br>
+				</label>
+				<label>
+			  	<input type="radio" name="gender" value="female"> Female<br>
+				</label>
+			</div>
+
+			<div>
+        	<input type="submit" value="Register" />
+			</div>
+		</form><!-- form -->
+
+	</section><!-- content -->
+</div><!-- container -->
+</body>
 </html>

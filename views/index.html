@@ -2,32 +2,62 @@
 <!--[if lt IE 7 ]> <html lang="en" class="ie6 ielt8"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="en" class="ie7 ielt8"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+
 <head>
-<meta charset="utf-8">
-<title>Paper Stack</title>
-<link rel="stylesheet" type="text/css" href="style.css" />
+
+	<meta charset="utf-8">
+	<title>Paper Stack</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
+
 <body>
-<div class="container">
-	<section id="content">
-		<form action="/profile" method="POST">
+	<div class="container">
+		<section id="content">
+			<form id="form" action="#" method="post" >
 			<h1>Login Form</h1>
+			<div id="error"><p> </p> </div>
 			<div>
-				<input type="text" placeholder="Username" required="" id="username" name="username"/>
+
+				<input type="text" placeholder="Username" id="username" required name="username" />
 			</div>
 			<div>
-				<input type="password" placeholder="Password" required="" id="password" name="password" />
+				<input type="password" placeholder="Password"  id="password" required name="password" />
 			</div>
 			<div>
-				<input type="submit" value="Log in" />
-<<<<<<< HEAD
-				<a href="#">Register</a>
-=======
->>>>>>> cb53b908cd5152887d0a16bdbc8afe2d7c8f0c22
+				<input type="button" value="Log in" onclick=check_button("login")  />
+				<input type="button" id="reg" value="Register" />
 			</div>
-		</form><!-- form -->
-	</section><!-- content -->
-</div><!-- container -->
+			</form>
+			<!-- form -->
+		</section>
+		<!-- content -->
+	</div>
+	<!-- container -->
+
 </body>
+<script>
+	function check_button(check) {
+		if (check == "login") {
+			document.getElementById("form").action = "/profile";
+				document.getElementById("form").method = "POST";
+var username=document.getElementById("username").value;
+var passowrd=	document.getElementById("password").value;
+if(username&&password){
+					document.getElementById("form").submit();
+}else{
+
+document.getElementById("error").innerHTML="Enter your username And Password";
+}
+		}
+	}
+	document.getElementById("reg").onclick = function () {
+		 location.href = "/reg";
+ };
+
+</script>
+
+
 </html>
