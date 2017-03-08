@@ -12,7 +12,7 @@ function template(tpl, data) {
     return tpl;
 }
 module.exports = function(req, res) {
-console.log("req.headers.cookie",req.headers.cookie);
+console.log("req.headers.cookies",req.headers.cookies);
     if (req.headers.cookie) {
         var c = req.headers.cookie;
 

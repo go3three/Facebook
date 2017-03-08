@@ -9,7 +9,7 @@ module.exports = function(req, res) {
   var client = db.createClient(db.config);
   db.createTable(client, function(errTable, resTable) {
       // client.end();
-  })  
+  })
     utils.parseBody(req, function(undefined, body) {
 
         var b = qs.parse(body);
