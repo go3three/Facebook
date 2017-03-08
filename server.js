@@ -9,8 +9,8 @@ var mainHandler = function(req, res) {
   try {
     router[path](req, res);
   } catch (err) {
-    // console.log('path', path);
-    // console.log('err', err);
+    console.log('path', path);
+    console.log('err', err);
     console.log('THERE WAS AN ERROR SOMEWHERE');
     res.writeHead(404);
     res.end('Not found');

@@ -4,15 +4,6 @@ var qs = require('querystring');
 var fs = require('fs');
 var index = fs.readFileSync(__dirname + '/../views/index.html');
 var profile = fs.readFileSync(__dirname + '/../views/profile.html');
-function template(tpl, data) {
-    Object.keys(data).forEach(function(key) {
-        tpl = tpl.replace(
-            new RegExp('\\{\\{\\s*' + key + '\\s*\\}\\}', 'g'),
-            data[key]
-        );
-    });
-    return tpl;
-}
 module.exports = function(req, res) {
     var client = db.createClient(db.config);
     utils.parseBody(req, function(undefined, body) {
@@ -23,11 +14,9 @@ module.exports = function(req, res) {
                 if (result.rows.length > 0) {
                     var b = result.rows[0];
                     res.writeHead(302, {
+                      'Location': '/profile',
                         'Set-Cookie': [`firstName=${b.first_name}`, `lastName=${b.last_name}`, `gender=${b.gender}`, `username=${b.username}`, 'login=1']
                     });
-                    // res.writeHead(302, {
-                    //     'Location': '/profile'
-                    // });
                     client.end();
                     res.end(profile);
                 } else {
@@ -40,4 +29,13 @@ module.exports = function(req, res) {
 
         })
     })
+}
+function template(tpl, data) {
+    Object.keys(data).forEach(function(key) {
+        tpl = tpl.replace(
+            new RegExp('\\{\\{\\s*' + key + '\\s*\\}\\}', 'g'),
+            data[key]
+        );
+    });
+    return tpl;
 }

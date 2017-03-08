@@ -46,6 +46,7 @@ var createTable = (client, cb) => {
 };
 
 var selectdata = (client, query, cb) => {
+
   client.query(query, cb);
 };
 var insertdata = (client, data, cb) => {
