@@ -47,12 +47,16 @@
             </div>
         </div>
 
-        <div id="container-content">
-            <h2>Put your Content Here.</h2>
-        </div>
+<form id="form" action="#">
+          <input class="container-content" type="textarea" rows="4" cols="50">
 
+</form>
     </div>
 </body>
 <script src="info.js"></script>
-
+<script>
+if (window.event.keycode == 13)
+{
+document.getElementById('form').submit();
+}</script>
 </html>

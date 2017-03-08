@@ -3,6 +3,7 @@ module.exports={
 'GET /favicon.ico':require("../views/favicon.js"),
 'GET /style.css':require("../views/style.js"),
 'POST /profile':require("../app/login.js"),
+'GET /profile':require("../views/profilemain.js"),
 'GET /reg':require("../views/reg_main.js"),
 'POST /reg':require("../app/reg.js"),
 'GET /wtfdiary.css':require("../app/profile.js"),

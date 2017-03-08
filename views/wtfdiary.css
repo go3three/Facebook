@@ -19,7 +19,13 @@ padding:20px;
 width:558px;
 color:#cccccc;
 }
-
+.container-content
+{
+border:solid 1px #cccccc;
+padding:20px;
+width:558px;
+color:#cccccc;
+}
 
 
 /*-------------Profile Page Design-------------*/
@@ -99,4 +105,3 @@ border:solid 1px #eeeeee;
 width:80px;
 -moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;
 }
-
