@@ -21,9 +21,29 @@ test('db.createTable(): should select data from the table info', t => {
   });
 });
 
+test('db.insertdata(): insert data in info table', t => {
+  db.insertdata(client,`INSERT INTO info (first_name,last_name,dob,gender,about,image_url,friends,username,password) VALUES ('test','test','11-11-2000','m','','www.google.com','0','test','test');`,(errInsert, resInsert) => {
+    t.notOk(errInsert, 'no errors');
+    t.ok(resInsert, 'got res result');
+    client.end(() => {
+      t.end();
+    });
+  });
+});
+// 
+// test('db.selectdata(): select data from info table', t => {
+//   db.selectdata(client,`SELECT * FROM info;`,(errSelect, resSelect) => {
+//     t.notOk(errSelect, 'no errors');
+//     t.ok(resSelect, 'got res result');
+//     client.end(() => {
+//       t.end();
+//     });
+//   });
+// });
+
 test('finish database client', t => {
   client.end(() => {
     t.pass('done, database down');
     t.end();
-  })
-})
+  });
+});
