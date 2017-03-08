@@ -23,7 +23,7 @@ module.exports = function(req, res) {
                 if (result.rows.length > 0) {
                     var b = result.rows[0];
                     res.writeHead(302, {
-                        'Set-Cookie': [`FirstName=${b.first_name}`, `LastName=${b.last_name}`, `gender=${b.gender}`, `username=${b.username}`, 'login=1']
+                        'Set-Cookie': [`firstName=${b.first_name}`, `lastName=${b.last_name}`, `gender=${b.gender}`, `username=${b.username}`, 'login=1']
                     });
                     // res.writeHead(302, {
                     //     'Location': '/profile'
