@@ -13,7 +13,7 @@ var config = {
     idleTimeoutMillis: 30000,
     ssl: true // how long a client is allowed to remain idle before being closed
 };
-
+//
 // var config = {
 //     user: 'postgres', //env var: PGUSER
 //     database: 'facebook', //env var: PGDATABASE
@@ -26,12 +26,14 @@ var config = {
 // };
 
 var createClient = (config, cb) => {
-  var client = new pg.Client(config);
-  client.connect(err => {
-    if (err) { throw err;}
-  });
+    var client = new pg.Client(config);
+    client.connect(err => {
+        if (err) {
+            throw err;
+        }
+    });
 
-  return client;
+    return client;
 };
 
 /**
@@ -41,21 +43,20 @@ var createClient = (config, cb) => {
  * @return {[type]}          [description]
  */
 var createTable = (client, cb) => {
-  var finalQuery = `${sqlQueries.info} ${sqlQueries.posts} ${sqlQueries.friends}`;
-  client.query(finalQuery, cb);
+    var finalQuery = `${sqlQueries.info} ${sqlQueries.posts} ${sqlQueries.friends}`;
+    client.query(finalQuery, cb);
 };
 
 var selectdata = (client, query, cb) => {
 
-  client.query(query, cb);
+    client.query(query, cb);
 };
 var insertdata = (client, data, cb) => {
-  client.query(data, cb);
+    client.query(data, cb);
 };
 
 module.exports = {
-  config: config,
-  createClient: createClient,
+        config: config,  createClient: createClient,
   createTable: createTable,
   insertdata: insertdata,
   selectdata: selectdata
