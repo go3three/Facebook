@@ -6,6 +6,8 @@
 ### Welcome to the gitSocial Web app guide!
 gitSocial is a project done by students learning web development (6 weeks coding bootcamp/GSG).
 
+----
+
 ### How to run it?
 
 Just open the *gitinSocial* link above and everything should work fine.
@@ -25,7 +27,6 @@ Just open the *gitinSocial* link above and everything should work fine.
   * Display profile page with the info of each user.
   * Ability to add/delete wall posts on profile page.
 
-  ----
 
 #### Programming languages/environments.
 
