@@ -10,10 +10,9 @@ var profile = fs.readFileSync(__dirname + '/../views/profile.html');
 module.exports = function(req, res) {
 
   var client = db.createClient(db.config);
-  // db.createTable(client, function(errTable, resTable) {
-  //   // client.end();
-  // });
+
   utils.parseBody(req, function(err, body) {
+    console.log('body',body);
     var b = qs.parse(body);
     console.log(b);
     var query = `

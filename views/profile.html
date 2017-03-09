@@ -15,13 +15,13 @@
           <a href="" id="signout" onclick="logout()">Sign out</a>
           <aside class="sidebar">
             <div class="img-wrp gray-border">
-              <img src="imgs/ghada.jpg" alt="">
+              <img src="/imgs/ghada.jpg" alt="">
             </div>
             <div class="info-wrp gray-border">
               <h3>Info</h3>
               <ul>
                 <li><label>Name: </label><span>{{fullName}}</span></li>
-                <li><label>Female: </label><span>{{gender}}</span></li>
+                <li><label>Gender: </label><span>{{gender}}</span></li>
               </ul>
             </div>
             <div class="friends-wrp gray-border">
@@ -29,7 +29,6 @@
               <ul>
                 <li><a href="">Ghada Ibra</a></li>
                 <li><a href="">Akram Badah</a></li>
-                <li><a href="">Mohammed </a></li>
               </ul>
             </div>
           </aside>
@@ -37,19 +36,12 @@
           <section class="content">
               <div class="post-head gray-border">
                   <h2>Wall Posts</h2>
-                  <textarea name="post" rows="8" cols="70" placeholder="Share your thoughts with the world..."></textarea>
-                  <button type="button" name="button">Post</button>
+                  <textarea name="post" id="post" rows="8" cols="70" placeholder="Share your thoughts with the world..."></textarea>
+                  <button type="button" name="button" onclick="newElement()">Post</button>
               </div>
-              <div class="posts-wrp">
-                  <article>
-                      <h3>13/5/2017</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
-                          eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
-                  </article>
-                  <article>
-                      <h3>13/5/2017</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
-                          eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
+              <div id="list"class="posts-wrp">
+                  <article id="post">
+                      <!-- <p id="post"></p> -->
                   </article>
               </div>
           </section>

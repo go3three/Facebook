@@ -13,20 +13,28 @@ module.exports = {
     'GET /profile': require('../views/profilemain.js'),
     'GET /reg': require('../views/reg_main.js'),
     'POST /reg': require('../app/reg.js'),
+    'POST /posts': require('../app/posts.js'),
+    'POST /displayposts': require('../app/displayposts.js'),
     'GET /info.js': require('../app/info.js'),
     'GET /wtfdiary.css': (req, res) => {
-      res.writeHead(200,{'Content-type':'text/css'});
-      res.write(wtfdiary);
-      res.end();
+        res.writeHead(200, {
+            'Content-type': 'text/css'
+        });
+        res.write(wtfdiary);
+        res.end();
     },
     'GET /cameraa.png': (req, res) => {
-      res.writeHead(200,{'Content-type':'image/jpg'});
-      res.write(img);
-      res.end();
+        res.writeHead(200, {
+            'Content-type': 'image/jpg'
+        });
+        res.write(img);
+        res.end();
     },
-    'GET /imgs/ghada.jpg': (req,res) => {
-      res.writeHead(200,{'Content-type':'image/jpg'});
-      res.write(cover);
-      res.end();
+    'GET /imgs/ghada.jpg': (req, res) => {
+        res.writeHead(200, {
+            'Content-type': 'image/jpg'
+        });
+        res.write(cover);
+        res.end();
     },
 }

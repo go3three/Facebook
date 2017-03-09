@@ -13,7 +13,6 @@ module.exports = function(req, res) {
     res.writeHead(401,{'Location':'/'});
     return res.end(index);
   }
-
   var html = utils.template(profile, {
     fullName: cookies.firstName + " " + cookies.lastName,
     gender: cookies.gender
