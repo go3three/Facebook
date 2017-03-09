@@ -61,3 +61,25 @@ test('GET /profile => should post data', function(t) {
     t.end();
   });
 });
+
+test('POST /posts => should post data', function(t) {
+
+  // in order to test posts, the username must exists in the database
+  shot.inject(mainHandler, {
+    method: 'POST',
+    url: '/reg',
+    payload: 'username=Foo&password=123&Fname=Besart&Lname=Shyti&dob=2017-03-22&gender=M'
+  }, res => {
+
+    shot.inject(mainHandler, {
+      method: 'POST',
+      url: '/posts',
+      headers: {cookie: 'firstName=Besart; lastName=Shyti; gender=M; username=Foo; login=1'},
+      payload: 'Foo,fdas'
+    }, res => {
+      console.log('res.payload',res.payload);
+      t.equal(res.statusCode, 200, 'got 200 status code');
+      t.end();
+    });
+  });
+});
