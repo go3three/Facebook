@@ -10,7 +10,7 @@
     "migrate": "node scripts/migrate.js",
     "test": "npm run db:create && npm run migrate && node ./tests/runner.js && npm run db:drop",
     "cov": "node_modules/.bin/istanbul cover ./tests/runner.js",
-    "dev:test":"nodemon ./tests/index.js"
+    "dev:test": "nodemon ./tests/index.js"
   },
   "repository": {
     "type": "git",
@@ -26,7 +26,8 @@
     "codeclimate-test-reporter": "^0.4.1",
     "pg": "^6.1.2",
     "shot": "^3.4.0",
-    "tape": "^4.6.3"
+    "tape": "^4.6.3",
+    "url-parse": "^1.1.8"
   },
   "devDependencies": {
     "istanbul": "^0.4.5"

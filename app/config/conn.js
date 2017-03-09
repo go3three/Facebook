@@ -1,39 +1,31 @@
 'use strict';
 
 var pg = require('pg');
+var URL = require('url-parse');
 var sqlQueries = require('./sql.js');
 
+var url = new URL(process.env.DATABASE_URL || 'postgres://postgres:482106@localhost:5432/test');
+
 var config = {
-  user: 'fxabnxhklpyyrv', //env var: PGUSER
-  database: 'd5n26g4qdcdst4', //env var: PGDATABASE
-  password: '153dbea38521b25d53bd635d5b26a6e98dc53d5da98e0ea51c5f37bfa78fe37e', //env var: PGPASSWORD
-  host: 'ec2-23-23-237-68.compute-1.amazonaws.com', // Server hosting the postgres database
-  port: 5432, //env var: PGPORT
-  max: 10, // max number of clients in the pool
+  user: url.username,
+  database: url.pathname.split('/')[1],
+  password: url.password,
+  host: url.hostname,
+  port: url.port,
+  max: 10,
   idleTimeoutMillis: 30000,
-  ssl: true // how long a client is allowed to remain idle before being closed
+  ssl: process.env.DATABASE_URL ? true : false
 };
 
-// var config = {
-//   user: 'postgres', //env var: PGUSER
-//   database: 'test', //env var: PGDATABASE
-//   password: '482106', //env var: PGPASSWORD
-//   host: 'localhost', // Server hosting the postgres database
-//   port: 5432, //env var: PGPORT
-//   max: 10, // max number of clients in the pool
-//   idleTimeoutMillis: 30000,
-//   // ssl: true // how long a client is allowed to remain idle before being closed
-// };
-
 var createClient = (config, cb) => {
-    var client = new pg.Client(config);
-    client.connect(err => {
-        if (err) {
-            throw err;
-        }
-    });
+  var client = new pg.Client(config);
+  client.connect(err => {
+    if (err) {
+      throw err;
+    }
+  });
 
-    return client;
+  return client;
 };
 
 /**
