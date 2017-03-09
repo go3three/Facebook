@@ -3,6 +3,7 @@
 var test = require('tape');
 var shot = require('shot');
 var mainHandler = require('../server.js');
+var reg = require('../app/reg.js');
 
 test('GET /notFound: should return not found ', function(t) {
   shot.inject(mainHandler, {

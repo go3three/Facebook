@@ -8,7 +8,7 @@
     "test": "node ./tests/runner.js",
     "migrate": "node scripts/migrate.js",
     "cov": "node_modules/.bin/istanbul cover ./tests/runner.js",
-    "dev:test":"nodemon ./tests/index.js"
+    "dev:test": "nodemon ./tests/index.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
     "tape": "^4.6.3"
   },
   "devDependencies": {
+    "codeclimate-test-reporter": "^0.4.1",
     "istanbul": "^0.4.5"
   }
 }

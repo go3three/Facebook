@@ -15,6 +15,7 @@ module.exports = function(req, res) {
   // });
   utils.parseBody(req, function(err, body) {
     var b = qs.parse(body);
+    console.log(b);
     var query = `
     INSERT INTO info (
           first_name,
