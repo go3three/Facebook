@@ -43,6 +43,7 @@ Just open the *gitinSocial* link above and everything should work fine.
  * Travis test builds.
  * Codeclimate code review.
  * Test *coverage* percentage.
+
 ----
 ### Concept illustration
 sketches made with Balsamiq mockups.
