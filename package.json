@@ -5,9 +5,11 @@
   "main": "server.js",
   "scripts": {
     "start": "node index.js",
-    "test": "node ./tests/runner.js",
+    "db:create": "psql -c 'CREATE DATABASE test;' -U postgres",
+    "db:drop": "psql -c 'DROP DATABASE test;' -U postgres",
     "migrate": "node scripts/migrate.js",
-    "cov": "node_modules/.bin/istanbul cover ./tests/run.js",
+    "test": "npm run db:create && npm run migrate && node ./tests/runner.js && npm run db:drop",
+    "cov": "node_modules/.bin/istanbul cover ./tests/runner.js",
     "dev:test":"nodemon ./tests/index.js"
   },
   "repository": {
