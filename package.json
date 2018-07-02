@@ -10,7 +10,9 @@
     "migrate": "node scripts/migrate.js",
     "test": "npm run db:create && npm run migrate && node ./tests/runner.js && npm run db:drop",
     "cov": "npm run db:create && npm run migrate && node_modules/.bin/istanbul cover ./tests/runner.js && npm run db:drop",
-    "dev:test": "nodemon ./tests/index.js"
+    "dev:test": "nodemon ./tests/index.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -27,9 +29,11 @@
     "pg": "^6.1.2",
     "shot": "^3.4.0",
     "tape": "^4.6.3",
-    "url-parse": "^1.1.8"
+    "url-parse": "^1.1.8",
+    "snyk": "^1.88.0"
   },
   "devDependencies": {
     "istanbul": "^0.4.5"
-  }
+  },
+  "snyk": true
 }
