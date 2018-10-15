@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/go3three/Faceebook#readme",
   "dependencies": {
-    "codeclimate-test-reporter": "^0.4.1",
+    "codeclimate-test-reporter": "^0.5.1",
     "pg": "^6.1.2",
     "shot": "^3.4.0",
     "tape": "^4.6.3",
